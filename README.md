@@ -18,7 +18,7 @@
 ### `AIM`:
 Given a text review, determine sentiment of review whether its positive or negative
 
-#### `Data Source`: https://www.kaggle.com/snap/amazon-fine-food-reviews
+#### `Data Source`: [Amazon Fine Foods Review](https://www.kaggle.com/snap/amazon-fine-food-reviews)
 
 ### `Data Includes`:
 Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
