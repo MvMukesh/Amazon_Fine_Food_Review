@@ -41,10 +41,46 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
 8. Time - timestamp for the review
 9. Summary - brief summary of the review
 10. Text - text of the review
-----
-----
-# `Task's`
 
+----
+----
+# `Analysis Task`
+
+##### amazon-fine-foods-review-analysis
+
+
+## Introduction
+
+Given longitudinal data, one should be able to understand how things change over time. McAuley and Leskovec published a paper in 2013 detailing how they used Amazon's gourmet food section to build a recommendation classifier which builds upon experience of a reviewer. Using this longitudinal dataset, there should be many things that could be understood from looking into data. 
+For instnace, we could potentially see trends of food over years and maybe even capture cupcake craze of 2011
+
+## `Goals` of this analysis:  
+
+* Understanding evolution of reviewers over time
+* Understanding variation of helpfulness of reviews for products over time
+* Visualize changes in reviews over 10 year period to understand what trends were important that year
+
+# `Results`
+Several results gathered through analysis notebook  
+
+* Review lengths over time become longer  
+* Semantic prediction of summary and review text weakly but significantly correlated according to pearson correlation  
+* Summary of reviews also get slightly longer over time  
+* Older a product is, more variation for review scores   
+* Helpfulness_Ratio generally increases overtime for a product  
+* Scatter_text plots showed evolution of Amazon platform and shows transition from movies to foods
+ * Earlier positive ratings stemmed from specific products but slowly shifted towards more sentiment based relationship.  
+
+## `Conclusion`
+This dataset for Fine Foods Reviews shows several trends
+* As writers become more experienced, length of their reviews get longer
+* In addition, Summary of reviews also seem to get longer
+* Additionally, Older_Products have more variation in Review_Scores
+*  Finally, using scattertext some of text features which are associated with higher or lower ratings for product which eventually shifts to a more semnatic based relationship can be seen
+
+----
+----
+# `Modelling Task`
 ## `1`-`Amazon Food Reviews EDA, NLP, Text Preprocessing and Visualization using ``t-SNE` `i.e `t-distributed stochastic neighbor embedding`
 #### Steps:
 1. Define `Problem Statement`
@@ -136,3 +172,8 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
 #### `Conclusions`:
 * TFIDF Featurization in Random Forest (BASE-LEARNERS=10) with random search gave best results with F1-score of 0.857
 * TFIDF Featurization in GBDT (BASE-LEARNERS=275, DEPTH=10) gave best results with F1-score of 0.8708
+
+----
+## Analysis References
+[Amazon Fine Foods Review](https://www.kaggle.com/snap/amazon-fine-food-reviews)  
+J. McAuley and J. Leskovec. [From amateurs to connoisseurs: modeling the evolution of user expertise through online reviews.](http://i.stanford.edu/~julian/pdfs/www13.pdf). WWW, 2013.
