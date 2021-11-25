@@ -42,6 +42,8 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
 10. Text - text of the review
 ----
 ----
+# `Task's`
+
 ## `1`-`Amazon Food Reviews EDA, NLP, Text Preprocessing and Visualization using ``t-SNE` `i.e `t-distributed stochastic neighbor embedding`
 #### Steps:
 1. Define `Problem Statement`
