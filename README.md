@@ -174,6 +174,5 @@ This dataset for Fine Foods Reviews shows several trends
 * TFIDF Featurization in GBDT (BASE-LEARNERS=275, DEPTH=10) gave best results with F1-score of 0.8708
 
 ----
-## Analysis References
-[Amazon Fine Foods Review](https://www.kaggle.com/snap/amazon-fine-food-reviews)  
+## Analysis References  
 J. McAuley and J. Leskovec. [From amateurs to connoisseurs: modeling the evolution of user expertise through online reviews.](http://i.stanford.edu/~julian/pdfs/www13.pdf). WWW, 2013.
