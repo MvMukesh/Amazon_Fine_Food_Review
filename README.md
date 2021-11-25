@@ -1,4 +1,4 @@
-*# Amazon-Food-Reviews-Analysis-and-Modelling Using Various Machine Learning Models
+# `Amazon-Food-Reviews-Analysis-and-Modelling Using Various Machine Learning Models`
 
 ### `Task Bird Eye View`:
 * Exploratory Data Analysis
