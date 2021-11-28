@@ -80,6 +80,12 @@ This dataset for Fine Foods Reviews shows several trends
 
 ----
 ----
+____
+`As this work will progress I will try to update this framework along with Proper Conclusions`
+____
+![image](https://user-images.githubusercontent.com/26667491/143769781-a9982064-5336-4896-a677-3c89949e7cc8.png)
+____
+
 # `Modelling Task`
 ## `1`-`Amazon Food Reviews EDA, NLP, Text Preprocessing and Visualization using ``t-SNE` `i.e `t-distributed stochastic neighbor embedding`
 #### Steps:
@@ -99,10 +105,8 @@ This dataset for Fine Foods Reviews shows several trends
 5. Do `Pertubation test` to check whether features are `multi-collinear` or not
 
 #### `Conclusions`:
-* Sparsity increases as we decrease C (increase lambda) when we use L1 Regularizer for regularization
-* TF_IDF Featurization performs best with F1_score of 0.967 and Accuracy of 91.39
-* Features are multi-collinear with different featurization
-* Logistic Regression is faster algorithm
+* -
+* -
 
 ----
 ----
@@ -114,10 +118,9 @@ This dataset for Fine Foods Reviews shows several trends
 3. Evaluate test data on various performance metrics like `accuracy` also plotted `Confusion matrix` using `seaborne`
 
 #### `Conclusions`:
-* KNN is a very slow Algorithm takes very long time to train
-* Best Accuracy is achieved by Avg Word2Vec Featurization which is of 89.38%
-* Both kd-tree and brute algorithms of KNN gives comparatively similar results
-* Overall KNN is not that good for this dataset
+* -
+* -
+
 ----
 ----
 
@@ -128,9 +131,8 @@ This dataset for Fine Foods Reviews shows several trends
 3. Print Top 25 Important Features for both Negative and Positive Reviews
 
 #### `Conclusions`:
-* Naive Bayes is much faster algorithm than KNN
-* Performance of Bernoulli NB is way much more better than Multinomial NB
-* Best F1 score is acheived by BOW featurization which is appx 0.9342
+* -
+* -
 
 ----
 ----
@@ -143,8 +145,8 @@ This dataset for Fine Foods Reviews shows several trends
 4. Evaluate `SGDClassifier` on best resulting featurization
 
 #### `Conclusions`:
-* BOW Featurization with linear kernel with grid search gave best results with F1-score of 0.9201
-* `Using SGDClasiifier takes very less time to train`
+* -
+* -
 
 ----
 ----
@@ -157,8 +159,8 @@ This dataset for Fine Foods Reviews shows several trends
 4. Plot Feature Importance recieved from Decision Tree Classifier
 
 #### `Conclusions`:
-* BOW Featurization(max_depth=8) gave best results with accuracy of 85.8% and F1-score of 0.858
-* `Decision Trees on BOW and tfidf would have taken forever if had taken all dimensions as it had huge dimension and hence tried with max 8 as max_depth`
+* -
+* -
 
 ----
 ----
@@ -170,8 +172,9 @@ This dataset for Fine Foods Reviews shows several trends
 4. Plot `World Cloud` of feature importance recieved from `RF and GBDT Classifier`
 
 #### `Conclusions`:
-* TFIDF Featurization in Random Forest (BASE-LEARNERS=10) with random search gave best results with F1-score of 0.857
-* TFIDF Featurization in GBDT (BASE-LEARNERS=275, DEPTH=10) gave best results with F1-score of 0.8708
+* -
+* -
+
 
 ----
 ## Analysis References  
