@@ -71,7 +71,7 @@ Several results gathered through analysis notebook
 * Scatter_text plots showed evolution of Amazon platform and shows transition from movies to foods
  * Earlier positive ratings stemmed from specific products but slowly shifted towards more sentiment based relationship.  
 
-## `Conclusion`
+## `Analysis Conclusion`
 This dataset for Fine Foods Reviews shows several trends
 * As writers become more experienced, length of their reviews get longer
 * In addition, Summary of reviews also seem to get longer
