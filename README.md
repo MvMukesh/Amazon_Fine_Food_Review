@@ -54,7 +54,7 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
 6. HelpfulnessDenominator - number of users who indicated whether they found review helpful or not => we add both users who said review is usefull and not usefull say, people number who find review usefull=2000 and notusefull=100, so HelpfulnessDenominator in this case will be (2000+100)
 7. Score - rating between 1 and 5
 8. Time - timestamp when review was given
-9. Summary - brief summary of the review
+9. Summary - brief summary of the review (written at the top of the review)
 10. Text - text of review
 
 ----
