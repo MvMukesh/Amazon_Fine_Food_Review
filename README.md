@@ -1,14 +1,14 @@
 # `Amazon Food Reviews (Analysis & Modelling) Using Various Machine Learning Models`
-## `Learnings`
-* `Text Processing and Natural Language Processing`
-* `SQLLite`
-* `sklearn`
-* `nltk` (natural language processing toolkit)
-* `Handling Imbalanced Classification Problem`
+## :books:`Learnings`
+* :point_right: `Text Processing and Natural Language Processing`
+* :point_right: `SQLLite`
+* :point_right: `sklearn`
+* :point_right: `nltk` (natural language processing toolkit)
+* :point_right: `Handling Imbalanced Classification Problem`
 
 ![image](https://user-images.githubusercontent.com/26667491/144200308-f1629271-94e5-4139-a82c-588bdbcae994.png)
 
-# `Problem Faced and Tackled`
+# :man_shrugging:`Problem Faced and Tackled`
 1. `How to convert text(words/sentences) into numerical Vectors of d-dimension?`
    * Most important Features are Review and Text which are in simple English language, aimed to convert them into Vectors then applying `Linear Algebra` to it
       * Say draw a plane(need to find it) between d-dimensional datapoints, this plane divides data points in two parts, say -ve and +ve
@@ -29,7 +29,7 @@
    * Averag Word2vec
    * Tf-idf and Word2Vec
 
-### `How Bag-of-Words works?`
+### :raising_hand_man:`How Bag-of-Words works?`
 **`set of all Text document is Called a Corpus` => Corpus means collection of documents(each Review is called as a Document in NLP)** 
 1. It constructs a dictionary(not similar to python) inside this dictionary Set of all unique words in Review(`called as a document in NLP`) will be collected
    * Say Review is 'This is good product' => constructed by BOW as {'This', 'is', 'good', 'product'} <= set of unique words taken from reviews
@@ -40,20 +40,20 @@
 
 2. 
 ---
-### `AIM(Framing it into ML Problem)`:
+### :dart:`AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
 
-### `Business Relevance`:
+### :factory:`Business Relevance`:
 Say a business have a product, only by undestanding product reviews, they can understand what to add,modify or remove in that product. +ve review tells Business what to consider while making new product and opposit goes for negative reviews
 
-### `How to Determine if Review is +ve or -ve`
+### :thinking:`How to Determine if Review is +ve or -ve`
 Score/Rating can be used
 * Rating which are 4 or 5 could be considered as +ve_rating
 * Rating which are 1 or 2 could be considered as -ve_rating
 * Rating which are 3 could be considered as neutral or ignored
 This can be seen as a approximate or proxy way of determining polarity or review
 
-#### `Data Source`: [Amazon Fine Foods Review](https://www.kaggle.com/snap/amazon-fine-food-reviews)
+#### :information_source: `Data Source`: [Amazon Fine Foods Review](https://www.kaggle.com/snap/amazon-fine-food-reviews)
 
 ### `Data Includes`:
 Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
@@ -77,7 +77,7 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
 10. Text - text of review
 
 
-### `Task Bird Eye View`:
+### :eyes:`Task Bird Eye View`:
 * Data Cleaning
 * Data Visualization
 * Text Featurization(BOW, tfidf, Word2Vec)
@@ -91,7 +91,7 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
   * LSTM(RNNs) etc
 ----
 ----
-# `Analysis Task`
+# :information_source:`Analysis Task`
 
 ##### amazon-fine-foods-review-analysis
 ![image](https://user-images.githubusercontent.com/26667491/143383141-41cf4f75-cae8-41f9-b770-8c2abd20b22f.png)
@@ -128,9 +128,9 @@ This dataset for Fine Foods Reviews shows several trends
 ----
 ----
 ____
-`As this work will progress I will try to update this framework along with Proper Conclusions`
-____
-![image](https://user-images.githubusercontent.com/26667491/143769781-a9982064-5336-4896-a677-3c89949e7cc8.png)
+:warning::warning::warning::warning::warning::warning::warning::warning::warning::warning:
+`As this work will progress I will try to update this framework along with Proper Conclusions`<br>
+:warning::warning::warning::warning::warning::warning::warning::warning::warning::warning:
 ____
 
 # `Modelling Task`
