@@ -15,7 +15,7 @@
       * assume a normal which is perpendicular to plane
       * data points in direction of normal are positive and on opposit direction are negative (this can be given to any model)
 2. `How to find a good plane to seperate data points?` 
-3. `What Rules this conversion(text to d-dimension) will follow?`
+3. `What Rules this conversion(text to d-dimension vectors) will follow?`
    * Say we have 1,2,3 reviews and `Sementic Similarity`(Englist Similarity) between (1,2) is greater then (1,3) i.e. if we finds out that (1,2) are more similar reviews then (1,3)
    * for review 1,2,3 we have vectors v1,v2,v3 then
       *  distance between (v1,v2) is smaller then (v1,v3) i.e. if they are more similar then there distance will be less
@@ -44,13 +44,21 @@
    * `Solution is Binary BOW`
       * Binary BOW => if word comes up then 1 else 0
          * distance between vectors i.e. ‖v1-v2‖ is approx eqall to under-root of number of differing words, as these vectors will have bool values in them
-3. Fixing/Improving BOW using **`StopWords, Tokenization, Lemmatization`**
+3. Fixing/Improving BOW using **`StopWords, Tokenization, Lemmatization`** => comes under `Text Preprocessing`
    * Say Review is This is a goood product => This, is ,a these words do not add much value to analysis and called StopWords, so in application consider removing these kind of words
    * :thinking: **Why to remove `Stop Words`** say we have two sentance, s1. This is good product, s.2 That is good product, both santence have distance of 1 but there Englist interpretation is same, just because of This and That stopword distance becomes 1, which does not make sense 
       * [list of english stopwords](https://gist.github.com/sebleier/554280)
-      * Thing to keep in mind is, `not` is also a stop word and we anyhow have to keep it as `not good` will become `good` after implementing Stopword which can completelly change the interpretation of the Reviews. => not is a boundy case
-      * Reving Stopwords can make our Vecotors smaller, but it is not a silver bullet
+      * Thing to keep in mind is, `not` is also a stop word and we anyhow have to keep it as `not good` will become `good` after implementing Stopword which can completelly change the interpretation of the Reviews. => not is a boundy case => `can say sometimes using StopWords can be very dangerious`
+      * Removing Stopwords can make our Vecotors smaller, but it is not a silver bullet
       * After removing Stopwords we will remain with group of words which will still make sense
+      * :thinking:`Good` and `good` these two again will give different vectors, machine will think of them as different words 
+        * Solution is convert everything to `lower case` or `upper case` 
+      * :thinking:**`STEMING`** say Very Good,Excellent belongs to base word Good, same does Steming to our text
+        * Algorithms used for Steming are as 
+           * **`SnowballStemmer`** => woork better then porter
+           * **`PorterStemmer`** => these are designed by Linguistics Experts
+      * :thinking:**`LEMMITIZATION`** breaking a sentence into words
+        * Problem comes when we have say CO
 ---
 ### :dart:`AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
