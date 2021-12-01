@@ -5,20 +5,40 @@
 * `sklearn`
 * `nltk` (natural language processing toolkit)
 * `Handling Imbalanced Classification Problem`
+
 ![image](https://user-images.githubusercontent.com/26667491/144200308-f1629271-94e5-4139-a82c-588bdbcae994.png)
 
-### `Task Bird Eye View`:
-* Data Cleaning
-* Data Visualization
-* Text Featurization(BOW, tfidf, Word2Vec)
-* Building several Machine Learning models like 
-  * Logistic Regression
-  * KNN
-  * SVM
-  * Naive Bayes
-  * Random Forest
-  * GBDT
-  * LSTM(RNNs) etc
+# `Problem Faced and Tackled`
+1. `How to convert text(words/sentences) into numerical Vectors of d-dimension?`
+   * Most important Features are Review and Text which are in simple English language, aimed to convert them into Vectors then applying `Linear Algebra` to it
+      * Say draw a plane(need to find it) between d-dimensional datapoints, this plane divides data points in two parts, say -ve and +ve
+      * assume a normal which is perpendicular to plane
+      * data points in direction of normal are positive and on opposit direction are negative (this can be given to any model)
+2. `How to find a good plane to seperate data points?` 
+3. `What Rules this conversion(text to d-dimension) will follow?`
+   * Say we have 1,2,3 reviews and `Sementic Similarity`(Englist Similarity) between (1,2) is greater then (1,3) i.e. if we finds out that (1,2) are more similar reviews then (1,3)
+   * for review 1,2,3 we have vectors v1,v2,v3 then
+      *  distance between (v1,v2) is smaller then (v1,v3) i.e. if they are more similar then there distance will be less
+      *  Geomatrically distance b/w (v1,v2) = (v1-v2)
+   * Can say if review(1,2) are more similar then there distance(v1,v2) will be less, `or similar points are closer`
+   * **`If all +ve and -ve points will be in there closer boundery it will become easy to draw plane between them and seprate them in two groups`**
+4. `How to find a Method which takes Text as input and convert it into d-dimensional vactor, such that similar text must be closer Geometrically(distance must be least between similar reviews)?`
+   * Bag-of-Words (simplest technique to change words to vectors) going down this list complexity increases
+   * Tf-idf (term frequency-inverse document frequency)
+   * Word2vec (technique for natural language processing)
+   * Averag Word2vec
+   * Tf-idf and Word2Vec
+
+### `How Bag-of-Words works?`
+**`set of all Text document is Called a Corpus` => Corpus means collection of documents(each Review is called as a Document in NLP)** 
+1. It constructs a dictionary(not similar to python) inside this dictionary Set of all unique words in Review(`called as a document in NLP`) will be collected
+   * Say Review is 'This is good product' => constructed by BOW as {'This', 'is', 'good', 'product'} <= set of unique words taken from reviews
+     * Assume we have `n` number of reviews(`called as a document in NLP`) and then we have `d-unique words` across all my reviews(document) and `d-vectors` which are vector representation of d-unique words. for example: {v1,v2,v3,v4} will correspond to {'This', 'is', 'good', 'product'} 
+       * `Keep in mind each Word is a different dimension of d-dimension_vectors`
+     * Now update every word count(corpus) in Review and assign that number to its vector. for example: how many time This comes say 1 time or 2 time assign this number to say v1 which was associated with word `This`, as all other words in d-dimensions are taken in considration so there corresponding vector values will be filled with 0.
+     * Due to this Vectors for particular sentence we take are generaly `very sparse`(sparse vactor means most of the values are 0 only some are non-0)
+
+2. 
 ---
 ### `AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
@@ -45,7 +65,6 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
 * Number of `Attributes/Columns` in data: 10
 
 ### `Attribute Information`:
-
 1. Id
 2. ProductId - unique identifier for product
 3. UserId - unqiue identifier for the user
@@ -57,6 +76,19 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
 9. Summary - brief summary of the review (written at the top of the review)
 10. Text - text of review
 
+
+### `Task Bird Eye View`:
+* Data Cleaning
+* Data Visualization
+* Text Featurization(BOW, tfidf, Word2Vec)
+* Building several Machine Learning models like 
+  * Logistic Regression
+  * KNN
+  * SVM
+  * Naive Bayes
+  * Random Forest
+  * GBDT
+  * LSTM(RNNs) etc
 ----
 ----
 # `Analysis Task`
