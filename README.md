@@ -58,7 +58,7 @@
            * **`SnowballStemmer`** => woork better then porter
            * **`PorterStemmer`** => these are designed by Linguistics Experts
       * :thinking:**`LEMMITIZATION`** breaking a sentence into words
-        * Problem comes when we have say CO
+        * Problem comes when we have say names as New York, what lemmitization will do it will breat it into New and York and then originality is lost.
 ---
 ### :dart:`AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
