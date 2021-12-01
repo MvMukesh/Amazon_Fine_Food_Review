@@ -18,6 +18,16 @@
 ### `AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
 
+### `Business Relevance`:
+Say a business have a product, only by undestanding product reviews, they can understand what to add,modify or remove in that product. +ve review tells Business what to consider while making new product and opposit goes for negative reviews
+
+### `How to Determine if Review is +ve or -ve`
+Score/Rating can be used
+* Rating which are 4 or 5 could be considered as +ve_rating
+* Rating which are 1 or 2 could be considered as -ve_rating
+* Rating which are 3 could be considered as neutral or ignored
+This can be seen as a approximate or proxy way of determining polarity or review
+
 #### `Data Source`: [Amazon Fine Foods Review](https://www.kaggle.com/snap/amazon-fine-food-reviews)
 
 ### `Data Includes`:
