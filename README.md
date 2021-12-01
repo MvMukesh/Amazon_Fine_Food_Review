@@ -26,21 +26,21 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
 * Number of `users`: 256,059
 * Number of `products`: 74,258
 * 260 users with > 50 reviews
-* `Timespan`: Oct 1999 - Oct 2012
+* `Timespan`: Oct 1999 - Oct 2012 (13 years dataset)
 * Number of `Attributes/Columns` in data: 10
 
 ### `Attribute Information`:
 
 1. Id
-2. ProductId - unique identifier for the product
+2. ProductId - unique identifier for product
 3. UserId - unqiue identifier for the user
-4. ProfileName
-5. HelpfulnessNumerator - number of users who found the review helpful
-6. HelpfulnessDenominator - number of users who indicated whether they found the review helpful or not
+4. ProfileName - profile name of user
+5. HelpfulnessNumerator - number of users who found review helpful => Users who said review is helpfull say 2000people, we dont take people who said review is not Usefull in this counting
+6. HelpfulnessDenominator - number of users who indicated whether they found review helpful or not => we add both users who said review is usefull and not usefull say, people number who find review usefull=2000 and notusefull=100, so HelpfulnessDenominator in this case will be (2000+100)
 7. Score - rating between 1 and 5
-8. Time - timestamp for the review
+8. Time - timestamp when review was given
 9. Summary - brief summary of the review
-10. Text - text of the review
+10. Text - text of review
 
 ----
 ----
