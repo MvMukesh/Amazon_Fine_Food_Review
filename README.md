@@ -44,21 +44,38 @@
    * `Solution is Binary BOW`
       * Binary BOW => if word comes up then 1 else 0
          * distance between vectors i.e. ‖v1-v2‖ is approx eqall to under-root of number of differing words, as these vectors will have bool values in them
-3. Fixing/Improving BOW using **`StopWords, Tokenization, Lemmatization`** => comes under `Text Preprocessing`
+3. `Fixing/Improving BOW` using **`StopWords, Tokenization, Lemmatization`** => comes under `Text Preprocessing`
    * Say Review is This is a goood product => This, is ,a these words do not add much value to analysis and called StopWords, so in application consider removing these kind of words
    * :thinking: **Why to remove `Stop Words`** say we have two sentance, s1. This is good product, s.2 That is good product, both santence have distance of 1 but there Englist interpretation is same, just because of This and That stopword distance becomes 1, which does not make sense 
       * [list of english stopwords](https://gist.github.com/sebleier/554280)
       * Thing to keep in mind is, `not` is also a stop word and we anyhow have to keep it as `not good` will become `good` after implementing Stopword which can completelly change the interpretation of the Reviews. => not is a boundy case => `can say sometimes using StopWords can be very dangerious`
       * Removing Stopwords can make our Vecotors smaller, but it is not a silver bullet
       * After removing Stopwords we will remain with group of words which will still make sense
-      * :thinking:`Good` and `good` these two again will give different vectors, machine will think of them as different words 
+   * :thinking:`Good` and `good` these two again will give different vectors, machine will think of them as different words 
         * Solution is convert everything to `lower case` or `upper case` 
-      * :thinking:**`STEMING`** say Very Good,Excellent belongs to base word Good, same does Steming to our text
+   * :thinking:**`STEMING`** say Very Good,Excellent belongs to base word Good, same does Steming to our text
         * Algorithms used for Steming are as 
            * **`SnowballStemmer`** => woork better then porter
            * **`PorterStemmer`** => these are designed by Linguistics Experts
-      * :thinking:**`LEMMITIZATION`** breaking a sentence into words
-        * Problem comes when we have say names as New York, what lemmitization will do it will breat it into New and York and then originality is lost.
+   * :thinking:**`LEMMITIZATION`** breaking a sentence into words, works bit different with languages like Madarin and Japanies
+        * Problem comes when we have say names as New York, what lemmitization will do it will breat it into New and York and then originality is lost
+           * Solution is Lemmitizer dictionary which takes care of such cases <br>
+`Bag-of-Words + Text Preprocessing does not guranty semantic meaning of words!!! So what to do`
+4. :thinking:**`Word2Vec`** comes in picture when we have to consider semantic meaning for words
+    * Bag-of-Words do not consider semantic meaning then comes Word2Vec in rescue <br>
+`Word2Vec + Text Preprocessing guranty semantic meaning of words` 
+
+### :raising_hand_man:What is uni-gram, bi-gram and n-gram. thinking:how does they work?? :thinking:Why to bother about them??
+Say r1 and r2 are two different reviews<br>
+r1 => This product is very good and affordable <br>
+r2 => This product is not very good and affordable <br>
+After removing stopwords we get: <br>
+r1 => product good affordable
+r2 => product good affordable,  as This, is, very, and, not are stopwords <br>
+now for machine both review are same if chnged to vector form, as there distance will be 0 <br>
+:sunglasses:**`To Solve this problem We use` `bi-gram`**
+
+
 ---
 ### :dart:`AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
