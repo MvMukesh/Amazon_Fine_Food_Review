@@ -1,4 +1,5 @@
 # `Amazon Food Reviews (Analysis & Modelling) Using Various Machine Learning Models`
+## Learnings `[Text and Natural Language Processing]`
 ![image](https://user-images.githubusercontent.com/26667491/144200308-f1629271-94e5-4139-a82c-588bdbcae994.png)
 
 ### `Task Bird Eye View`:
