@@ -7,7 +7,6 @@
 ![image](https://user-images.githubusercontent.com/26667491/144200308-f1629271-94e5-4139-a82c-588bdbcae994.png)
 
 ### `Task Bird Eye View`:
-* Exploratory Data Analysis
 * Data Cleaning
 * Data Visualization
 * Text Featurization(BOW, tfidf, Word2Vec)
