@@ -1,4 +1,4 @@
-# `Amazon Food Reviews (Analysis & Modelling) Using Various Machine Learning Models`
+# :india:`Amazon Food Reviews (Analysis & Modelling) Using Various Machine Learning Models`
 ## :books:`Learnings`
 * :point_right: `Text Processing and Natural Language Processing`
 * :point_right: `SQLLite`
@@ -23,7 +23,8 @@
    * Can say if review(1,2) are more similar then there distance(v1,v2) will be less, `or similar points are closer`
    * **`If all +ve and -ve points will be in there closer boundery it will become easy to draw plane between them and seprate them in two groups`**
 4. `How to find a Method which takes Text as input and convert it into d-dimensional vactor, such that similar text must be closer Geometrically(distance must be least between similar reviews)?`
-   * Bag-of-Words (simplest technique to change words to vectors) going down this list complexity increases
+   * Bag-of-Words (simplest technique to change words to vectors) => works on count of words, going down this list complexity increases
+      * Binary/Boolean Bag-of-Words (variation of BOW) => if word comes up 1 else 0
    * Tf-idf (term frequency-inverse document frequency)
    * Word2vec (technique for natural language processing)
    * Averag Word2vec
@@ -37,8 +38,19 @@
        * `Keep in mind each Word is a different dimension of d-dimension_vectors`
      * Now update every word count(corpus) in Review and assign that number to its vector. for example: how many time This comes say 1 time or 2 time assign this number to say v1 which was associated with word `This`, as all other words in d-dimensions are taken in considration so there corresponding vector values will be filled with 0.
      * Due to this Vectors for particular sentence we take are generaly `very sparse`(sparse vactor means most of the values are 0 only some are non-0)
-
-2. 
+   * `vector length(v1-v2) is calculated as ‖v1-v2‖ i.e. norm`
+2. **`Problem Faced with BOW`**
+   * distance between reviews will be least even when there Englist interpretation are way different for example: This is very good and This is not very good
+   * `Solution is Binary BOW`
+      * Binary BOW => if word comes up then 1 else 0
+         * distance between vectors i.e. ‖v1-v2‖ is approx eqall to under-root of number of differing words, as these vectors will have bool values in them
+3. Fixing/Improving BOW using **`StopWords, Tokenization, Lemmatization`**
+   * Say Review is This is a goood product => This, is ,a these words do not add much value to analysis and called StopWords, so in application consider removing these kind of words
+   * :thinking: **Why to remove `Stop Words`** say we have two sentance, s1. This is good product, s.2 That is good product, both santence have distance of 1 but there Englist interpretation is same, just because of This and That stopword distance becomes 1, which does not make sense 
+      * [list of english stopwords](https://gist.github.com/sebleier/554280)
+      * Thing to keep in mind is, `not` is also a stop word and we anyhow have to keep it as `not good` will become `good` after implementing Stopword which can completelly change the interpretation of the Reviews. => not is a boundy case
+      * Reving Stopwords can make our Vecotors smaller, but it is not a silver bullet
+      * After removing Stopwords we will remain with group of words which will still make sense
 ---
 ### :dart:`AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
