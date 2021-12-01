@@ -1,5 +1,5 @@
 # `Amazon Food Reviews (Analysis & Modelling) Using Various Machine Learning Models`
-![image](https://user-images.githubusercontent.com/26667491/143383141-41cf4f75-cae8-41f9-b770-8c2abd20b22f.png)
+![image](https://user-images.githubusercontent.com/26667491/144200308-f1629271-94e5-4139-a82c-588bdbcae994.png)
 
 ### `Task Bird Eye View`:
 * Exploratory Data Analysis
@@ -15,7 +15,7 @@
   * GBDT
   * LSTM(RNNs) etc
 ---
-### `AIM`:
+### `AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
 
 #### `Data Source`: [Amazon Fine Foods Review](https://www.kaggle.com/snap/amazon-fine-food-reviews)
@@ -47,7 +47,7 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
 # `Analysis Task`
 
 ##### amazon-fine-foods-review-analysis
-
+![image](https://user-images.githubusercontent.com/26667491/143383141-41cf4f75-cae8-41f9-b770-8c2abd20b22f.png)
 
 ## Introduction
 
