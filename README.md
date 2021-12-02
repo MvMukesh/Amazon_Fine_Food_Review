@@ -190,8 +190,10 @@ Amazon Fine Food Reviews dataset consists of reviews of fine foods from Amazon
 9. Summary - brief summary of the review (written at the top of the review)
 10. Text - text of review
 
+----
+----
 
-### :eyes:`Task Bird Eye View`:
+### :eagle:`Task Bird Eye View`::eagle:
 * Data Cleaning
 * Data Visualization
 * Text Featurization(BOW, tfidf, Word2Vec)
