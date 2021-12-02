@@ -72,8 +72,8 @@ r1 => This product is very good and affordable <br>
 r2 => This product is not very good and affordable <br>
 After removing stopwords we get: <br>
 r1 => product good affordable
-r2 => product good affordable,  as This, is, very, and, not are stopwords <br>
-now for machine both review are same if chnged to vector form, as there distance will be 0 <br>
+r2 => product good affordable,  as --This, is, very, and, not-- are stopwords <br>
+now for machine both review are same if changed to vector form, as there distance will be 0 <br>
 :sunglasses:**`To Solve this problem we use` `bi-gram or n-gram`**
 :thinking:how does bi-gram work then?? => takes 2 words pair as a dimension
   * It makes pairs of words(two words at a time) and consider each pair as a dimension and then compare each pair with other
@@ -120,8 +120,17 @@ Multiply Tf formula with idf formula <br>
   * BOW finds number of occurances of wi(any ith word) in ri(any ith review)
   * This is how Tf-Idf evolves this BOW approach.
 * :thinking:`Problem with Tf-IDF` => does not take Semantic meaning of Words, say for it Good and Excellent or Cheape and Affordable are two different root words
-  * Though Word2Vac solves this problem
+  * Though Word2Vec solves this problem
  
+:raising_hand_man:`More about Word2Vac??` as this is a state of the art technique => working -- take a large text corpus -> Word2Vec -> word:vector
+* As tf-idf and Bow takes sentences and chanfge them to sparse vectors
+* `Word2Vec takes Words changes them into dense d-dimensional not sparse vector`
+  * keeps in consideration Semantical mraning, say walked->walking, swam->swimming (verb tense)
+  * keep in consideration retlationships, say men->women and king->queen, vector for these are parallen, say (V_men - V_Women) || (V_king - V_queen)
+    * It does all of this in automode not programed to do so, as a ton of maths is involved behind it
+  * more dimensions you take more information rich the vector is => if we have higher dimensions faar more complex relationship can be understood
+    * dimensionality depends upon the size fo the corpus
+    * intutivelly in observes neighbour hood of the word if that is same then there vector should be same (how this is done can be seen in deep learning -> matrix factorizations) 
 
 ---
 ### :dart:`AIM(Framing it into ML Problem)`:
