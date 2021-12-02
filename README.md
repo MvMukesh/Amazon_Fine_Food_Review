@@ -30,8 +30,8 @@
    * Averag Word2vec
    * Tf-idf and Word2Vec
 
-### :raising_hand_man:`How Bag-of-Words works?`
-**`set of all Text document is Called a Corpus` => Corpus means collection of documents(each Review is called as a Document in NLP)** 
+### :raising_hand_man:`How Bag-of-Words works?`,`What are its variations?` => variations include n-grams, preprocessing, Tf-idf
+**`set of all Text document is Called a Corpus` => Corpus means collection of documents(each Review here is called as a Document in NLP)** 
 1. It constructs a dictionary(not similar to python) inside this dictionary Set of all unique words in Review(`called as a document in NLP`) will be collected
    * Say Review is 'This is good product' => constructed by BOW as {'This', 'is', 'good', 'product'} <= set of unique words taken from reviews
      * Assume we have `n` number of reviews(`called as a document in NLP`) and then we have `d-unique words` across all my reviews(document) and `d-vectors` which are vector representation of d-unique words. for example: {v1,v2,v3,v4} will correspond to {'This', 'is', 'good', 'product'} 
@@ -61,7 +61,8 @@
         * Problem comes when we have say names as New York, what lemmitization will do it will breat it into New and York and then originality is lost
            * Solution is Lemmitizer dictionary which takes care of such cases <br>
 `Bag-of-Words + Text Preprocessing does not guranty semantic meaning of words!!! So what to do`
-4. :thinking:**`Word2Vec`** comes in picture when we have to consider semantic meaning for words
+
+4.:raising_hand_man:**`Word2Vec`** comes in picture when we have to consider semantic meaning for words
     * Bag-of-Words do not consider semantic meaning then comes Word2Vec in rescue <br>
 `Word2Vec + Text Preprocessing guranty semantic meaning of words` 
 
@@ -85,7 +86,16 @@ Helps to somhow retain some of the sequence information, for n-gram if n=1 than 
 `number of tri-gram` >= `number of bi-grams` >= `number of uni-gram` in any text
 * if we have `n-gram` and n>1 then dimensionality d increases
 * `But BOW with bi-gram/tri-gram are very very usefull as it helps us retain the sequence information but with a cost of Dimensionality`
- 
+
+:raising_hand_man:`What is Tf-idf(term frequency-inverse document frequency)??`,:thinking:`What to get out of Tf and idf???` <br>
+Say we have n-number of reviews(r) and each review is combination of some words say r1 => w1,w2,w3,w2. r2 => w3,w4,w1
+* make a BOW representation of it => for r1 => w1 occurs 1 time, w2 occurs 2 times, w3 occurs 1 time
+* Now for `TF(wi,rj)` = `number of times say wi occurs in rj` / `total number of words in rj`
+  * for TF(term frequncy) of (all words(w) and all reviews(r)) = number of times say w1 occurs in r1 / total number of words in r1
+    * Say in r1 how many time w2 occurs => TF(w2,r1)[read as Tf of word-w2 in review-r1] = 2/4
+* :nerd_face: `Point to remember` Tf of any word in any review(document) ranges between 0 and 1
+  * `0 <= Tf(wi,rj) <= 1` <= always, as this have range of 0-1 it can be seen as Probability(as Probability of anything have a range of (0-1)  
+
 ---
 ### :dart:`AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
