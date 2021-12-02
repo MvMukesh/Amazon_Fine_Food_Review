@@ -87,14 +87,41 @@ Helps to somhow retain some of the sequence information, for n-gram if n=1 than 
 * if we have `n-gram` and n>1 then dimensionality d increases
 * `But BOW with bi-gram/tri-gram are very very usefull as it helps us retain the sequence information but with a cost of Dimensionality`
 
-:raising_hand_man:`What is Tf-idf(term frequency-inverse document frequency)??`,:thinking:`What to get out of Tf and idf???` <br>
+:raising_hand_man:`What is Tf-idf(term frequency-inverse document frequency)??`,:thinking:`What does Tf and idf means???` <br>
 Say we have n-number of reviews(r) and each review is combination of some words say r1 => w1,w2,w3,w2. r2 => w3,w4,w1
 * make a BOW representation of it => for r1 => w1 occurs 1 time, w2 occurs 2 times, w3 occurs 1 time
 * Now for `TF(wi,rj)` = `number of times say wi occurs in rj` / `total number of words in rj`
   * for TF(term frequncy) of (all words(w) and all reviews(r)) = number of times say w1 occurs in r1 / total number of words in r1
     * Say in r1 how many time w2 occurs => TF(w2,r1)[read as Tf of word-w2 in review-r1] = 2/4
 * :nerd_face: `Point to remember` Tf of any word in any review(document) ranges between 0 and 1
-  * `0 <= Tf(wi,rj) <= 1` <= always, as this have range of 0-1 it can be seen as Probability(as Probability of anything have a range of (0-1)  
+  * `0 <= Tf(wi,rj) <= 1` <= always, as this have range of 0-1 it can be seen as Probability(as Probability of anything have a range of (0-1)
+  * **`TF is saying what is the Probability of finding a word in review(document)`** <= more often word occur will lead to higher Tf
+    * BOW and Tf-idf are techniques which were first created for Information Retrival(sub area of NLP) in the past (maybee applied on thoug of web pages) 
+:thinking:`What is IDF(inverse document frequency) then??`
+* IDF is always measured for a given word(w) in a corpus(whole data), say corpus = set of all Reviews(r1,r2....,rn)
+* `IDF(wi,corpus)` = `log[number of all Reviews(documents) / number of Reviews(documents) which contain wi]`
+  * Read as IDF of word(wi) in a given document corpus(all reviews) = log[number of all Reviews(documents) / number of Reviews(documents) which contain wi]
+* `number of all Reviews(documents)` `>=` `number of Reviews(documents) which contain wi` <= always, can be think logically
+  * if above case is true then value of `number of all Reviews(documents)` `>=` `number of Reviews(documents) which contain wi` `>=` `1` <= always i.e. `IDF` `>=` `0` <= always
+  * so log(number of all Reviews(documents) / number of Reviews(documents) which contain wi) will be >= 0 WHY???
+    * as log(1) = 0 any number greater then 1 may be log(2) will given somthing more then 0.
+* `IDF of any word in a document corpus is always greater then or equall to 0`
+* :nerd_face:`Point to remember` If number of Reviews(documents) which contain wi is so hight then IDF will decrease => can say `IDF decreases when number of Reviews(documents) which contain wi increases and apposit`
+  * for example: as the is used most of time in Revies and count of the is appx equall to corpus count then its IDF will be low 
+  * If wi is a rare term its IDF will be high
+#### :thinking:`How TF-idf work in parallel then???`
+Multiply Tf formula with idf formula <br>
+* Tf * IDF => Tf(wi,r1) * IDF(wi,corpus)
+  * `Tf(wi,r1)` => finds how often wi(word) occur in review-r1(documnet) => if wi occurs most of the time its value will be high
+  * `IDF(wi,corpus)` => finds how often wi(word) occur in corpus(whole Reviw data) => if wi occurs most of the time its value will be least
+    * :nerd_face:`Point` In TF-IDF we give:
+      * more importance if a word is frequent in Review(document) along with
+      * more importance to a rare word in the corpus
+  * BOW finds number of occurances of wi(any ith word) in ri(any ith review)
+  * This is how Tf-Idf evolves this BOW approach.
+* :thinking:`Problem with Tf-IDF` => does not take Semantic meaning of Words, say for it Good and Excellent or Cheape and Affordable are two different root words
+  * Though Word2Vac solves this problem
+ 
 
 ---
 ### :dart:`AIM(Framing it into ML Problem)`:
