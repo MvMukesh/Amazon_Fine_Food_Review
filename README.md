@@ -122,7 +122,8 @@ Multiply Tf formula with idf formula <br>
 * :thinking:`Problem with Tf-IDF` => does not take Semantic meaning of Words, say for it Good and Excellent or Cheape and Affordable are two different root words
   * Though Word2Vec solves this problem
  
-:raising_hand_man:`More about Word2Vac??` as this is a state of the art technique => working -- take a large text corpus -> Word2Vec -> word:vector
+:raising_hand_man:`More about Word2Vac??` as this is a state of the art technique => working -- take a large text corpus -> Word2Vec -> word:vector <br>
+This [link](https://arxiv.org/pdf/1301.3781.pdf) can quench your thirst of Word2Vec
 * As tf-idf and Bow takes sentences and chanfge them to sparse vectors
 * `Word2Vec takes Words changes them into dense d-dimensional not sparse vector`
   * keeps in consideration Semantical mraning, say walked->walking, swam->swimming (verb tense)
