@@ -65,7 +65,7 @@
     * Bag-of-Words do not consider semantic meaning then comes Word2Vec in rescue <br>
 `Word2Vec + Text Preprocessing guranty semantic meaning of words` 
 
-### :raising_hand_man:What is uni-gram, bi-gram and n-gram. thinking:how does they work?? :thinking:Why to bother about them??
+### :raising_hand_man:`What is uni-gram, bi-gram and n-gram` :thinking:`how does they work??` :thinking:`Why to bother about them??`
 Say r1 and r2 are two different reviews<br>
 r1 => This product is very good and affordable <br>
 r2 => This product is not very good and affordable <br>
@@ -73,9 +73,19 @@ After removing stopwords we get: <br>
 r1 => product good affordable
 r2 => product good affordable,  as This, is, very, and, not are stopwords <br>
 now for machine both review are same if chnged to vector form, as there distance will be 0 <br>
-:sunglasses:**`To Solve this problem We use` `bi-gram`**
+:sunglasses:**`To Solve this problem we use` `bi-gram or n-gram`**
+:thinking:how does bi-gram work then?? => takes 2 words pair as a dimension
+  * It makes pairs of words(two words at a time) and consider each pair as a dimension and then compare each pair with other
+      * say for review r1 => This product is very good and affordable it will make vector as v1 =>'This product' v2=>'product is' v3=> 'is very' and so on, this is how it will find difference between 'not very good' and 'very good' <br>
 
+:thinking:`Why to bother about n-grams/bi/uni??`<br>
+Helps to somhow retain some of the sequence information, for n-gram if n=1 than it will not retain sequential information, as we for bi or tri gram we will different dimension for 'very good' and 'not very good'<br>
 
+:thinking:`Problem With grams`
+`number of tri-gram` >= `number of bi-grams` >= `number of uni-gram` in any text
+* if we have `n-gram` and n>1 then dimensionality d increases
+* `But BOW with bi-gram/tri-gram are very very usefull as it helps us retain the sequence information but with a cost of Dimensionality`
+ 
 ---
 ### :dart:`AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
