@@ -133,7 +133,27 @@ This [link](https://arxiv.org/pdf/1301.3781.pdf) can quench your thirst of Word2
     * dimensionality depends upon the size fo the corpus
     * intutivelly in observes neighbour hood of the word if that is same then there vector should be same (how this is done can be seen in deep learning -> matrix factorizations) 
 
+### :raising_hand_man:`Problem In applying Word2Vec in our case??`
+As Word2Vec takes a word and gives us vector of d-dimension related with the word but in our case Reviews(documents) are sequence of words(sentences).<br>
+`So Using Word2Vec How to convert a sentences into a Vector???` <br>
+* `sen2vec` is a Deep Learning Technique which can be used but Deep Learning is out of the Scope for this implementation
+For now `Simpler weighting techniques` will be as:
+* `Average-Word2Vec`
+* `TfIDF-Weighted Word2Vec`
+These above mentioned two techniques are very simple one, some techniqes like `Thought Vectors` comes up in Deep Learning which is for now out of focus topic
+
+:thinking:`How Average-Word2Vec works ??` 
+  * say for Review-r1 take out Word2Vec of each word and add them all individually then divide it with number of words in Review-r1, now conside this outcome as vector representation of r1.
+    * sumup all vectors and divide it with number of words (avg) 
+  * this is the Simplest way to use Word2Vec to build a Sentences vector which not always works
+
+:thinking:`How TfIDF-Weighted Word2Vec works ??`
+  * for a review(r) first find TfIDF of each word(w) then find Word2Vec of each word then multiply Tf-idf(t) with word2Vec and divide by summation of all tfidf's
+    * tfidf-word2vec(r1) = [t1 * Word2Vec(w1) + t2 * Word2Vec(w2) / (t1+t2)] <= say we have only two words(w1,w2) in review(r1) 
+
+**`sparsity of the matrix = no.of zero elements / total elements`**
 ---
+
 ### :dart:`AIM(Framing it into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
 
