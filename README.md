@@ -341,4 +341,4 @@ ____
 
 ----
 ## Analysis References  
-J. McAuley and J. Leskovec. [From amateurs to connoisseurs: modeling the evolution of user expertise through online reviews.](http://i.stanford.edu/~julian/pdfs/www13.pdf). WWW, 2013.
+ [J. McAuley and J. Leskovec.-- WWW 2013](http://i.stanford.edu/~julian/pdfs/www13.pdf)
