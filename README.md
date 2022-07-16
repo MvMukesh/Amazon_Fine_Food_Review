@@ -1,4 +1,4 @@
-# :india:`Amazon Food Reviews (Analysis & Modelling) Using Various Machine Learning Models`
+# `Food Reviews (Analysis & Modelling) using Various Machine Learning Models`
 ## :books:`Learnings`
 * :point_right: `Text Processing and Natural Language Processing`
 * :point_right: `SQLLite`
