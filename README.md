@@ -4,9 +4,12 @@
 * :point_right: `SQLLite`
 * :point_right: `sklearn`
 * :point_right: `nltk` (natural language processing toolkit)
-* :point_right: `Handling Imbalanced Classification Problem`
+* :point_right: `Handling Imbalanced dataset`
 
-![image](https://user-images.githubusercontent.com/26667491/144200308-f1629271-94e5-4139-a82c-588bdbcae994.png)
+<hr style="border:40px solid gray"> </hr>
+
+<p align="center">
+   <kbd><img src="https://user-images.githubusercontent.com/26667491/144200308-f1629271-94e5-4139-a82c-588bdbcae994.png" height='550' width='1000'/> </kbd>  
 
 # :man_shrugging:`Problem Faced and Tackled`
 1. `How to convert text(words/sentences) into numerical Vectors of d-dimension?`
@@ -152,9 +155,10 @@ These above mentioned two techniques are very simple one, some techniqes like `T
     * tfidf-word2vec(r1) = [t1 * Word2Vec(w1) + t2 * Word2Vec(w2) / (t1+t2)] <= say we have only two words(w1,w2) in review(r1) 
 
 **`sparsity of the matrix = no.of zero elements / total elements`**
----
 
-### :dart:`AIM(Framing it into ML Problem)`:
+<hr>
+
+# :dart: `AIM(Framing Reviews Problem into ML Problem)`:
 Given a text review, determine sentiment of review whether its positive or negative
 
 ### :factory:`Business Relevance`:
