@@ -1,6 +1,6 @@
 # `Food Reviews (Analysis & Modelling) using Various Machine Learning Models`
 ## :books:`Learnings`
-* :point_right: `Text Processing and Natural Language Processing`
+* :point_right: `Text Processing`
 * :point_right: `SQLLite`
 * :point_right: `sklearn`
 * :point_right: `nltk` (natural language processing toolkit)
@@ -9,7 +9,7 @@
 <hr style="border:40px solid gray"> </hr>
 
 <p align="center">
-   <kbd><img src="https://user-images.githubusercontent.com/26667491/144200308-f1629271-94e5-4139-a82c-588bdbcae994.png" height='550' width='1000'/> </kbd>  
+   <kbd><img src="https://github.com/MvMukesh/Amazon_Fine_Food_Review/blob/main/images/fresh_review.png" height='300' width='900'/> </kbd>  
 
 # :man_shrugging:`Problem Faced and Tackled`
 1. `How to convert text(words/sentences) into numerical Vectors of d-dimension?`
